@@ -1,0 +1,28 @@
+body{
+    font-family: "Arial";
+    color: #3B3B3B;
+    background: #eeeeee;
+    padding: 10px;
+}
+.login-card {
+    max-width: 300px;
+    margin: 0 auto;
+}
+mat-form-field{
+      width: 100%;
+}
+button{
+    width: 100%;
+}
+.error{
+    color: red;
+}
+.errormessage{
+    font-size: 14px;
+    width: 100%;
+    padding: 3px;
+    background: #F5F5F5;
+    border: 2px solid #D64958;
+    color: #D64958;
+}
+  

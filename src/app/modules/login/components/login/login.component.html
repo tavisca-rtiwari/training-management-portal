@@ -1,0 +1,35 @@
+<body>
+    <mat-card class="login-card">
+        <mat-card-header>
+                  
+        </mat-card-header>
+
+        <mat-card-content>
+            <p class="hint">Sign in with your ZOHO account</p>
+            <form [formGroup]="loginForm"  class="form-vertical">
+                <div class="form-group">
+                    <div *ngIf="invalid" class="errormessage">
+                        The username or password you entered is invalid
+                    </div><br>
+                    <mat-form-field>
+                        <input matInput id="username" formControlName="username" placeholder="username" type="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && forms.username.errors }">
+                    </mat-form-field>
+                    <div *ngIf="submitted && forms.username.errors" class="error">
+                        <div *ngIf="forms.username.errors.required">Username is mandatory..</div>
+                        <div *ngIf="forms.username.errors.email">Enter a valid username..</div>
+                    </div></div>
+                <div class="form-group">
+                    <mat-form-field>
+                        <input matInput id="password" formControlName="password" placeholder="Password" type="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && forms.password.errors }" />
+                    </mat-form-field>
+                    <div *ngIf="submitted && forms.password.errors" class="error">
+                        <div *ngIf="forms.password.errors.required" >Password is mandatory..</div>
+                    </div>
+                </div>
+                    <button mat-raised-button color="primary" (click) = "onSubmit();">Login</button>
+            </form>
+        
+        </mat-card-content>
+               
+    </mat-card>
+</body>
